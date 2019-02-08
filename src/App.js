@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import Pokemon from './components/Pokemon';
+import Stats from './components/Stats';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
       pokemon: [],
-      value: ''
+      value: '',
+      info: {}
     }
   }
 
@@ -22,7 +24,10 @@ class App extends Component {
     axios.get(`https://pokeapi.co/api/v2/pokemon-species/${value}`)
     .then(val => {
       const moreInfo = val.data;
-      console.log(moreInfo);
+      
+      this.setState({
+        info: moreInfo
+      })
     });
   }
 
@@ -48,12 +53,11 @@ class App extends Component {
         <div className="App">
           <h1>PICK A POKE</h1>
           <Pokemon change={this.handleChange} display={this.state.pokemon} />
+          <Stats info={this.state.info}/>
         </div>
       );
   }
 
 }
-
-
 
 export default App;

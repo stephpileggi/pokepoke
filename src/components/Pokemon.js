@@ -2,10 +2,6 @@ import React, { Component } from "react";
 
 class Pokemon extends Component {
 
-    constructor() {
-        super();
-    }
-
     render() {
         const pokemons = this.props.display;
         const optionItems = pokemons.map((poke) =>

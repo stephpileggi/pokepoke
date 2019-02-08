@@ -1,4 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const Select = styled.select`
+  font-size: 18px;
+  color: #0e0c0d;
+  text-transform: capitalize;
+`;
 
 class Pokemon extends Component {
 
@@ -11,9 +18,9 @@ class Pokemon extends Component {
         return (
             <div>
                 <form action="">
-                    <select onChange={this.props.change}>
+                    <Select onChange={this.props.change}>
                         {optionItems}
-                    </select>
+                    </Select>
                 </form>   
             </div>
         )

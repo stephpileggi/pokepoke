@@ -2,26 +2,28 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const Name = styled.h2`
-  font-size: 25px;
+  font-size: 2.5rem;
   color: red;
   text-transform: capitalize;
 `;
 
-class Stats extends Component {
+const Info = styled.p`
+  font-size: 2rem;
+`
 
-    render() {
-        const infos = this.props.info;
+const Stats = (props) => {
+
+        const infos = props.info;
 
         return (
           <div>
             <Name>Name: {infos.name}</Name>
-            <p>Capture Rate: {infos.capture_rate}</p>
-            <p>Happiness: {infos.base_happiness}</p>
-            <p>Hatch Counter: {infos.hatch_counter}</p>
+            <Info>Capture Rate: {infos.capture_rate}</Info>
+            <Info>Happiness: {infos.base_happiness}</Info>
+            <Info>Hatch Counter: {infos.hatch_counter}</Info>
           </div>
         );
-        
-    }
+           
 }
 
 export default Stats;

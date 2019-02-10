@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 import Pokemon from './components/Pokemon';
 import Stats from './components/Stats';
@@ -8,7 +7,7 @@ import img from './images/pokemon.jpg';
 
 const Title = styled.h1`
   color: #fff;
-  font-size: 70px;
+  font-size: 7rem;
   text-shadow: rgb(227, 45, 31) 1px 1px, rgb(227, 45, 31) 2px 2px,
     rgb(227, 45, 31) 3px 3px, rgb(227, 45, 31) 4px 4px, rgb(227, 45, 31) 5px 5px,
     rgb(227, 45, 31) 6px 6px, rgb(227, 45, 31) 7px 7px, rgb(227, 45, 31) 8px 8px,
